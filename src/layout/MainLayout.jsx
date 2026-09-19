@@ -1,18 +1,17 @@
+import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
-function MainLayout({ children }) {
+function MainLayout() {
   return (
-    <>
+    <div className="app">
+
       <Header />
-
       <main>
-        {children}
+        <Outlet />
       </main>
-
       <Footer />
-    </>
-  )
+    </div>
+  );
 }
 
-export default MainLayout
+export default MainLayout;

@@ -4,7 +4,7 @@ const BASE_URL = "https://api.themoviedb.org/3";
 
 export async function buscarConteudos(termo) {
   const resposta = await fetch(
-    ${BASE_URL}/search/multi?api_key=${API_KEY}&language=pt-BR&query=${encodeURIComponent(termo)}
+    `${BASE_URL}/search/multi?api_key=${API_KEY}&language=pt-BR&query=${encodeURIComponent(termo)}`
   );
 
   if (!resposta.ok) {
@@ -22,7 +22,7 @@ export async function buscarConteudos(termo) {
 
 export async function buscarFilme(id) {
   const resposta = await fetch(
-    ${BASE_URL}/movie/${id}?api_key=${API_KEY}&language=pt-BR
+    `${BASE_URL}/movie/${id}?api_key=${API_KEY}&language=pt-BR`
   );
 
   if (!resposta.ok) {
@@ -34,7 +34,7 @@ export async function buscarFilme(id) {
 
 export async function buscarSerie(id) {
   const resposta = await fetch(
-    ${BASE_URL}/tv/${id}?api_key=${API_KEY}&language=pt-BR
+    `${BASE_URL}/tv/${id}?api_key=${API_KEY}&language=pt-BR`
   );
 
   if (!resposta.ok) {

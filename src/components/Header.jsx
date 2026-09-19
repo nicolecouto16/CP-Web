@@ -1,15 +1,27 @@
+import { Link } from "react-router-dom";
+import { Search } from "lucide-react";
+
 function Header() {
   return (
-    <header>
-      <h1>Antespoiler</h1>
+    <header className="header">
+      <Link to="/" className="logo">
+        Antes<span>Spoiler</span>
+      </Link>
 
       <nav>
-        <a href="/">Home</a>
-        <a href="/busca">Buscar</a>
-        <a href="/minha-lista">Minha Lista</a>
+        <Link to="/">Home</Link>
+        <Link to="/filmes">Filmes</Link>
+        <Link to="/series">Séries</Link>
+        <Link to="/busca">
+          <Search size={14} />
+          Busca
+        </Link>
+        <Link to="/minha-lista">
+          Minha Lista
+        </Link>
       </nav>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
